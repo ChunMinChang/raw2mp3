@@ -62,6 +62,16 @@ if [[ ! -z ${FRAUNHOFER[$PLATFORM]} ]]; then
   COMMANDS+=("$encoder -m 1 -q 1 -br 0 -vbri -if $IN_FILE -of ${OUT_FILE}_vbr_vbri_fraunhofer.mp3")
 fi
 
+# Check if FFmpeg works on this platform
+FFMPEG="ffmpeg"
+if [ $(command_exists $FFMPEG) -eq 1 ]; then
+  print_hint "$FFMPEG is available on this platform."
+  print_hint "You can run '$FFMPEG -h' to know how to use it."
+  echo ""
+  COMMANDS+=("$FFMPEG -i $IN_FILE -codec:a libmp3lame -b:a 256k ${OUT_FILE}_cbr_xing_libmp3lame.mp3")
+  COMMANDS+=("$FFMPEG -i $IN_FILE -codec:a libmp3lame -qscale:a 2 ${OUT_FILE}_vbr_xing_libmp3lame.mp3")
+fi
+
 if [ ${#COMMANDS[@]} -eq 0 ]; then
     print_error "No available encoder on this platform. Finish."
     exit

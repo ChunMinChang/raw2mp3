@@ -45,3 +45,13 @@ function print_title() {
   local normal="\033[0m"
   echo "\n${bold_green}$msg\n----------------------------------------\n${normal}"
 }
+
+function command_exists() {
+  local cmd=$1
+  if ! cmd_loc="$(type -p "$cmd")" || [[ -z $cmd_loc ]]; then
+    echo >&2 "$cmd is not installed.";
+    echo 0
+    return
+  fi
+  echo 1
+}
