@@ -57,6 +57,8 @@ FRAUNHOFER=(
   "$FRAUNHOFER_PATH/mp3sEnc_MacOSXuniv_FCRv15_20080530/mp3sEncoder" # macOS
   "$FRAUNHOFER_PATH/mp3sEnc_Win64_FCRv15_20080530/mp3sEncoder" # Win 64-bit
   "$FRAUNHOFER_PATH/mp3sEnc_Win32_FCRv15_20080530/mp3sEncoder" # Win 32-bit
+  "$FRAUNHOFER_PATH/mp3sEnc_Lin64static_FCRv15_20080530/mp3sEncoder" # Linux 64-bit
+  "$FRAUNHOFER_PATH/mp3sEnc_Lin32static_FCRv15_20080530/mp3sEncoder" # Linux 32-bit
 )
 if [[ ! -z ${FRAUNHOFER[$PLATFORM]} ]]; then
   encoder=${FRAUNHOFER[$PLATFORM]}

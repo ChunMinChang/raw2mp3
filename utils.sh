@@ -12,6 +12,14 @@ function get_platform_type() {
     else
       type=-1
     fi
+  elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+    if [ "$(uname -m)" == "x86_64" ]; then
+      type=3
+    elif [ "$(uname -m)" == "i686" ]; then
+      type=4
+    else
+      type=-1
+    fi
   fi
 
   if [ $type -eq -1 ]; then

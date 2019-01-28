@@ -8,11 +8,11 @@ which is a *mp3* converter on *Windows*.
 ## How to run
 
 1. Put your *wav* files under *sources*.
-2. Run `$ sh encode.sh`
+2. Run `$ bash encode.sh` or `$ sh encode.sh`
 3. The output *mp3* files will be put under a created *mp3* folder.
 
 ## MP3 Encoders
-The files are encoded by [*Fraunhofer encoder*][fhg] and [*FFmpeg* with *libmp3lame* library][ffmpeg-libmp3lame]. Currenlty [*FFmpeg*][ffmpeg] only works when it's already installed.
+The files are encoded by [*Fraunhofer encoder*][fhg] and [*FFmpeg* with *libmp3lame* library][ffmpeg-libmp3lame]. If there is no *ffmpeg* on the platform, no *mp3* files with *Xing* headers will be generated. However, *mp3* files with *VBRI* headers or wihtout any headers will be generated on the supported platforms.
 
 The header types of the converted *mp3* by different encoders are:
 - [*Fraunhofer encoder*][fhg]
@@ -23,9 +23,9 @@ The header types of the converted *mp3* by different encoders are:
     - *VBR*: *Xing* tag within *Xing* header
 
 ## TODO
-- [ ] Make it run on Linux
+- [x] Make it run on Linux
 - [x] Make it run on Windows
-- [ ] Add [*LAME* mp3 encoder][lame]
+- [ ] Add [*LAME* mp3 encoder][lame] to work on platforms without *ffmpeg*
 - [x] Encode by *ffmpeg* if it's installed on the platform
 - [ ] Add a brief intro for mp3 format
     - Header types
