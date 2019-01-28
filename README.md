@@ -24,7 +24,7 @@ The header types of the converted *mp3* by different encoders are:
 
 ## TODO
 - [ ] Make it run on Linux
-- [ ] Make it run on Windows
+- [x] Make it run on Windows
 - [ ] Add [*LAME* mp3 encoder][lame]
 - [x] Encode by *ffmpeg* if it's installed on the platform
 - [ ] Add a brief intro for mp3 format

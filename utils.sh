@@ -4,6 +4,14 @@ function get_platform_type() {
   local type=-1
   if [[ "$OSTYPE" == "darwin"* ]]; then
     type=0
+  elif [[ "$OSTYPE" == "msys" ]]; then
+    if [ "$(uname -m)" == "x86_64" ]; then
+      type=1
+    elif [ "$(uname -m)" == "i686" ]; then
+      type=2
+    else
+      type=-1
+    fi
   fi
 
   if [ $type -eq -1 ]; then

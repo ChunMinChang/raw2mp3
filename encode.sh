@@ -2,7 +2,7 @@
 
 # Load helper functions.
 # /////////////////////////////////////////////////////////////////////////////
-source utils.sh
+source ./utils.sh
 
 # Search for available sources. (Only support .wav file for now.)
 # /////////////////////////////////////////////////////////////////////////////
@@ -36,6 +36,10 @@ print_title "Search for available encoders"
 # -1: Unsupported or unknown platform
 #  0: macOS(OS X) / Darwin
 PLATFORM=$(get_platform_type)
+if [ $PLATFORM -eq -1 ]; then
+  echo "Run on a unsupported platform. Finish."
+  exit
+fi
 
 # Create an array to store the commands.
 # The input file and the output file will be named as INPUT and OUTPUT
@@ -51,6 +55,8 @@ ENCODERS_PATH="encoders"
 FRAUNHOFER_PATH=$ENCODERS_PATH/mp3sconsv15
 FRAUNHOFER=(
   "$FRAUNHOFER_PATH/mp3sEnc_MacOSXuniv_FCRv15_20080530/mp3sEncoder" # macOS
+  "$FRAUNHOFER_PATH/mp3sEnc_Win64_FCRv15_20080530/mp3sEncoder" # Win 64-bit
+  "$FRAUNHOFER_PATH/mp3sEnc_Win32_FCRv15_20080530/mp3sEncoder" # Win 32-bit
 )
 if [[ ! -z ${FRAUNHOFER[$PLATFORM]} ]]; then
   encoder=${FRAUNHOFER[$PLATFORM]}
