@@ -22,6 +22,9 @@ The header types of the converted *mp3* by different encoders are:
     - *CBR*: *Info* tag within *Xing* header
     - *VBR*: *Xing* tag within *Xing* header
 
+## Edit _ID3_ tags
+Please see the document [here][id3tags]
+
 ## TODO
 - [x] Make it run on Linux
 - [x] Make it run on Windows
@@ -35,6 +38,7 @@ The header types of the converted *mp3* by different encoders are:
             - *Info*: *CBR* (constant bit rate)
         - *VBRI* (tag is *VBRI*): *VBR* (variable bit rate)
 - [ ] Support more raw file format like *aiff*(*.aif*) file
+- [x] Add documents about how to edit _ID3_ tags
 
 ## References
 - [lazka/mutagen-mp3-test-vector][lazka]
@@ -46,3 +50,5 @@ The header types of the converted *mp3* by different encoders are:
 [lame]: http://lame.sourceforge.net/ "LAME MP3 Encoder"
 [ffmpeg]: https://www.ffmpeg.org/ "FFmpeg"
 [ffmpeg-libmp3lame]: https://trac.ffmpeg.org/wiki/Encode/MP3 "FFmpeg MP3 Encoding Guide"
+
+[id3tags]: documents/id3tags.md "ID3 Tags"
