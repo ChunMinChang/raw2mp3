@@ -21,7 +21,7 @@ After the _tags_ are inserted, the _ID3_ tags may be inserted in the begining of
 ![](vbri_source_with_id3.PNG)
 ![](vbri_source_with_id3_2.PNG)
 
-### On ohter platforms
+### On other platforms
 There are tons of open source ID3 tags editor you can use, if you are on other platforms.
 
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
