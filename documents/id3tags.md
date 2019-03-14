@@ -22,7 +22,7 @@ After the _tags_ are inserted, the _ID3_ tags may be inserted in the begining of
 ![](vbri_source_with_id3_2.PNG)
 
 ### On other platforms
-There are tons of open source ID3 tags editor you can use, if you are on other platforms.
+Lots of open source ID3 tags editors are free to use. Just choose one you like if you are on other platforms.
 
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
 - [EasyTAG](https://wiki.gnome.org/Apps/EasyTAG)
